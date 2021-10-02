@@ -1,7 +1,7 @@
 {
   "name": "@freestuffbot/common",
   "version": "0.1.0",
-  "description": "npm module for common classes and funcionality shared across different freestuff microservices",
+  "description": "A set of common funcionality shared across different freestuff microservices",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
