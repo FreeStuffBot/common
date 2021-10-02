@@ -59,13 +59,13 @@ export default class Const {
         other: string;
     };
     static readonly themes: Theme[];
-    static readonly defaultTheme: Theme;
+    static readonly defaultTheme: any;
     static readonly currencies: Currency[];
-    static readonly defaultCurrency: Currency;
+    static readonly defaultCurrency: any;
     static readonly priceClasses: PriceClass[];
-    static readonly defaultPriceClass: PriceClass;
+    static readonly defaultPriceClass: any;
     static readonly platforms: Platform[];
-    static readonly defaultPlatforms: number;
+    static readonly defaultPlatforms: any;
     static readonly testAnnouncementContent: GameInfo;
     static readonly defaultSettingsBits: number;
     static readonly defaultFilterBits: number;
