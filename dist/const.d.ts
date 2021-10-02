@@ -1,0 +1,72 @@
+import { Currency, GameInfo, Platform, PriceClass, Theme } from '@freestuffbot/typings';
+export default class Const {
+    static readonly links: {
+        website: string;
+        websiteClean: string;
+        botInvite: string;
+        supportInvite: string;
+        topgg: string;
+        dbl: string;
+        dlabs: string;
+        team: string;
+        privacy: string;
+        terms: string;
+        testgame: string;
+        guide: string;
+        themes: string;
+        donate: string;
+    };
+    static readonly embedDefaultColor = 3092790;
+    static readonly invisibleCharacter = "\uFEFF";
+    static readonly placeholderThumbnail = "https://media.discordapp.net/attachments/672907465670787083/830794212894572574/thumbnail_placeholder.png";
+    static readonly brandIcons: {
+        graySquare: string;
+        regularSquare: string;
+        regularRound: string;
+    };
+    static readonly storeIcons: {
+        steam: string;
+        epic: string;
+        humble: string;
+        gog: string;
+        origin: string;
+        uplay: string;
+        twitch: string;
+        itch: string;
+        discord: string;
+        apple: string;
+        google: string;
+        switch: string;
+        ps: string;
+        xbox: string;
+        other: string;
+    };
+    static readonly storeIconsExt: {
+        steam: string;
+        epic: string;
+        humble: string;
+        gog: string;
+        origin: string;
+        uplay: string;
+        twitch: string;
+        itch: string;
+        discord: string;
+        switch: string;
+        apple: string;
+        google: string;
+        ps: string;
+        xbox: string;
+        other: string;
+    };
+    static readonly themes: Theme[];
+    static readonly defaultTheme: Theme;
+    static readonly currencies: Currency[];
+    static readonly defaultCurrency: Currency;
+    static readonly priceClasses: PriceClass[];
+    static readonly defaultPriceClass: PriceClass;
+    static readonly platforms: Platform[];
+    static readonly defaultPlatforms: number;
+    static readonly testAnnouncementContent: GameInfo;
+    static readonly defaultSettingsBits: number;
+    static readonly defaultFilterBits: number;
+}
