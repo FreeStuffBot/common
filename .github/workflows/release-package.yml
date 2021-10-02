@@ -15,7 +15,7 @@ jobs:
       - run: npm ci
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      # - run: npm test
+      - run: npm build
 
   publish-gpr:
     needs: build
@@ -29,10 +29,9 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: npm build
+      # - run: npm ci
+      #   env:
+      #     GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
