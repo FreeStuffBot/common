@@ -1,5 +1,5 @@
 
-export class Util {
+export default class Util {
 
   public static modifyBits(input: number, lshift: number, bits: number, value: number): number {
     return (input & ~((2 ** bits - 1) << lshift)) | (value << lshift)

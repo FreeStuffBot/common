@@ -9,7 +9,7 @@ import ThemeSeven from './themes/7'
 import ThemeEight from './themes/8'
 import ThemeNine from './themes/9'
 import ThemeTen from './themes/10'
-import { Util } from './lib/util'
+import Util from './lib/util'
 import Localisation from './lib/localisation'
 
 

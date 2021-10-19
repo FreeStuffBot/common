@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Util = void 0;
 class Util {
     static modifyBits(input, lshift, bits, value) {
         return (input & ~((2 ** bits - 1) << lshift)) | (value << lshift);
@@ -12,5 +11,5 @@ class Util {
         return out;
     }
 }
-exports.Util = Util;
+exports.default = Util;
 //# sourceMappingURL=util.js.map

@@ -360,9 +360,9 @@ Const.testAnnouncementContent = {
     }
 };
 Const.defaultSettingsBits = 0
-    | util_1.Util.modifyBits(0, 5, 4, Const.currencies[0].id)
-    | util_1.Util.modifyBits(0, 10, 6, localisation_1.default.languageToId('en-GB'));
+    | util_1.default.modifyBits(0, 5, 4, Const.currencies[0].id)
+    | util_1.default.modifyBits(0, 10, 6, localisation_1.default.languageToId('en-GB'));
 Const.defaultFilterBits = 0
-    | util_1.Util.modifyBits(0, 2, 2, Const.defaultPriceClass.id)
-    | util_1.Util.modifyBits(0, 4, 8, Const.defaultPlatforms);
+    | util_1.default.modifyBits(0, 2, 2, Const.defaultPriceClass.id)
+    | util_1.default.modifyBits(0, 4, 8, Const.defaultPlatforms);
 //# sourceMappingURL=const.js.map

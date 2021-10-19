@@ -74,7 +74,7 @@ export default class BaseTheme {
     })
   }
 
-  static generateButton(game: GameInfo, data: GuildData): [ 'text', string ] | [ 'fields', MessageEmbed["fields"][number] ] {
+  static generateButton(game: GameInfo, data: GuildData): [ 'text', string ] | [ 'fields', MessageEmbed["fields"] ] {
     if (!game.urls.client) {
       return [
         'text',
