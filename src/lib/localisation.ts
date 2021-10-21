@@ -79,7 +79,7 @@ export default class Localisation {
     return ''
   }
 
-  public static getAllLocalisation(): { id: string, name: string, nameEn: string, flag: string, ranking: number }[] {
+  public static getAllLanguages(): { id: string, name: string, nameEn: string, flag: string, ranking: number }[] {
     return Localisation.list.map(lang => ({
       id: lang,
       name: Localisation.fetch(lang, 'lang_name'),
