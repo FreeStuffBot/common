@@ -68,7 +68,7 @@ class Localisation {
         }
         return '';
     }
-    static getAllLocalisation() {
+    static getAllLanguages() {
         return Localisation.list.map(lang => ({
             id: lang,
             name: Localisation.fetch(lang, 'lang_name'),

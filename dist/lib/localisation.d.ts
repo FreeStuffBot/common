@@ -12,7 +12,7 @@ export default class Localisation {
     static languageById(id: number | string): string;
     static languageToId(lang: string): number;
     static languageByName(query: string): string;
-    static getAllLocalisation(): {
+    static getAllLanguages(): {
         id: string;
         name: string;
         nameEn: string;
