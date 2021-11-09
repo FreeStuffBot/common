@@ -1,15 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const _1_1 = require("./themes/1");
-const _2_1 = require("./themes/2");
-const _3_1 = require("./themes/3");
-const _4_1 = require("./themes/4");
-const _5_1 = require("./themes/5");
-const _6_1 = require("./themes/6");
-const _7_1 = require("./themes/7");
-const _8_1 = require("./themes/8");
-const _9_1 = require("./themes/9");
-const _10_1 = require("./themes/10");
 const util_1 = require("./lib/util");
 const localisation_1 = require("./lib/localisation");
 class Const {
@@ -75,7 +65,6 @@ Const.themes = [
         name: '=theme_one_name',
         description: '=theme_one_desc',
         emoji: '1️⃣',
-        builder: new _1_1.default(),
         toggleCurrencies: true,
         usesEmbeds: true
     },
@@ -84,7 +73,6 @@ Const.themes = [
         name: '=theme_two_name',
         description: '=theme_two_desc',
         emoji: '2️⃣',
-        builder: new _2_1.default(),
         toggleCurrencies: true,
         usesEmbeds: true
     },
@@ -93,7 +81,6 @@ Const.themes = [
         name: '=theme_three_name',
         description: '=theme_three_desc',
         emoji: '3️⃣',
-        builder: new _3_1.default(),
         toggleCurrencies: true,
         usesEmbeds: true
     },
@@ -102,7 +89,6 @@ Const.themes = [
         name: '=theme_four_name',
         description: '=theme_four_desc',
         emoji: '4️⃣',
-        builder: new _4_1.default(),
         toggleCurrencies: true,
         usesEmbeds: true
     },
@@ -111,7 +97,6 @@ Const.themes = [
         name: '=theme_five_name',
         description: '=theme_five_desc',
         emoji: '5️⃣',
-        builder: new _5_1.default(),
         toggleCurrencies: false,
         usesEmbeds: true
     },
@@ -120,7 +105,6 @@ Const.themes = [
         name: '=theme_six_name',
         description: '=theme_six_desc',
         emoji: '6️⃣',
-        builder: new _6_1.default(),
         toggleCurrencies: false,
         usesEmbeds: true
     },
@@ -129,7 +113,6 @@ Const.themes = [
         name: '=theme_seven_name',
         description: '=theme_seven_desc',
         emoji: '7️⃣',
-        builder: new _7_1.default(),
         toggleCurrencies: false,
         usesEmbeds: false
     },
@@ -138,7 +121,6 @@ Const.themes = [
         name: '=theme_eight_name',
         description: '=theme_eight_desc',
         emoji: '8️⃣',
-        builder: new _8_1.default(),
         toggleCurrencies: false,
         usesEmbeds: false
     },
@@ -147,7 +129,6 @@ Const.themes = [
         name: '=theme_nine_name',
         description: '=theme_nine_desc',
         emoji: '9️⃣',
-        builder: new _9_1.default(),
         toggleCurrencies: false,
         usesEmbeds: false
     },
@@ -156,7 +137,6 @@ Const.themes = [
         name: '=theme_ten_name',
         description: '=theme_ten_desc',
         emoji: '🔟',
-        builder: new _10_1.default(),
         toggleCurrencies: false,
         usesEmbeds: false
     }

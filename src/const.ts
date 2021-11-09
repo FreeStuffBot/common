@@ -1,14 +1,4 @@
 import { Currency, GameInfo, Platform, PriceClass, Theme } from '@freestuffbot/typings'
-import ThemeOne from './themes/1'
-import ThemeTwo from './themes/2'
-import ThemeThree from './themes/3'
-import ThemeFour from './themes/4'
-import ThemeFive from './themes/5'
-import ThemeSix from './themes/6'
-import ThemeSeven from './themes/7'
-import ThemeEight from './themes/8'
-import ThemeNine from './themes/9'
-import ThemeTen from './themes/10'
 import Util from './lib/util'
 import Localisation from './lib/localisation'
 
@@ -85,7 +75,6 @@ export default class Const {
       name: '=theme_one_name',
       description: '=theme_one_desc',
       emoji: '1️⃣',
-      builder: new ThemeOne(),
       toggleCurrencies: true,
       usesEmbeds: true
     },
@@ -94,7 +83,6 @@ export default class Const {
       name: '=theme_two_name',
       description: '=theme_two_desc',
       emoji: '2️⃣',
-      builder: new ThemeTwo(),
       toggleCurrencies: true,
       usesEmbeds: true
     },
@@ -103,7 +91,6 @@ export default class Const {
       name: '=theme_three_name',
       description: '=theme_three_desc',
       emoji: '3️⃣',
-      builder: new ThemeThree(),
       toggleCurrencies: true,
       usesEmbeds: true
     },
@@ -112,7 +99,6 @@ export default class Const {
       name: '=theme_four_name',
       description: '=theme_four_desc',
       emoji: '4️⃣',
-      builder: new ThemeFour(),
       toggleCurrencies: true,
       usesEmbeds: true
     },
@@ -121,7 +107,6 @@ export default class Const {
       name: '=theme_five_name',
       description: '=theme_five_desc',
       emoji: '5️⃣',
-      builder: new ThemeFive(),
       toggleCurrencies: false,
       usesEmbeds: true
     },
@@ -130,7 +115,6 @@ export default class Const {
       name: '=theme_six_name',
       description: '=theme_six_desc',
       emoji: '6️⃣',
-      builder: new ThemeSix(),
       toggleCurrencies: false,
       usesEmbeds: true
     },
@@ -139,7 +123,6 @@ export default class Const {
       name: '=theme_seven_name',
       description: '=theme_seven_desc',
       emoji: '7️⃣',
-      builder: new ThemeSeven(),
       toggleCurrencies: false,
       usesEmbeds: false
     },
@@ -148,7 +131,6 @@ export default class Const {
       name: '=theme_eight_name',
       description: '=theme_eight_desc',
       emoji: '8️⃣',
-      builder: new ThemeEight(),
       toggleCurrencies: false,
       usesEmbeds: false
     },
@@ -157,7 +139,6 @@ export default class Const {
       name: '=theme_nine_name',
       description: '=theme_nine_desc',
       emoji: '9️⃣',
-      builder: new ThemeNine(),
       toggleCurrencies: false,
       usesEmbeds: false
     },
@@ -166,7 +147,6 @@ export default class Const {
       name: '=theme_ten_name',
       description: '=theme_ten_desc',
       emoji: '🔟',
-      builder: new ThemeTen(),
       toggleCurrencies: false,
       usesEmbeds: false
     }

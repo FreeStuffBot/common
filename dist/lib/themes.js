@@ -13,7 +13,7 @@ const _10_1 = require("../themes/10");
 class Themes {
     //
     static build(content, data, settings) {
-        return data.theme.builder.build(content, data, settings);
+        return Themes.builders[data.theme.id].build(content, data, settings);
     }
 }
 exports.default = Themes;

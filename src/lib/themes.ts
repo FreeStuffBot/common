@@ -30,7 +30,7 @@ export default class Themes {
   //
 
   public static build(content: GameInfo[], data: GuildData, settings: { test?: boolean, donationNotice?: boolean }): InteractionApplicationCommandCallbackData {
-    return data.theme.builder.build(content, data, settings)
+    return Themes.builders[data.theme.id].build(content, data, settings)
   }
 
 }
