@@ -92,12 +92,12 @@ export default class Localisation {
   /**
    * Recursively traverses the given object until maxDepth, translating every string value found
    */
-  public static translateObject(object: any, guildData: GuildData | undefined, context: any, maxDepth: number) {
-    if (maxDepth <= 0) return
+  public static translateObject<T extends Object>(object: T, guildData: GuildData | undefined, context: any, maxDepth: number): T {
+    if (maxDepth <= 0) return null
     for (const key in object) {
       if (key === '_context') continue
       if (typeof object[key] === 'object') Localisation.translateObject(object[key], guildData, context, maxDepth - 1)
-      else if (typeof object[key] === 'string') object[key] = Localisation.text(guildData, object[key], context)
+      else if (typeof object[key] === 'string') object[key as any] = Localisation.text(guildData, object[key as any], context)
     }
   }
 
