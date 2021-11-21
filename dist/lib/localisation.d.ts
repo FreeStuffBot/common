@@ -22,7 +22,7 @@ export default class Localisation {
     /**
      * Recursively traverses the given object until maxDepth, translating every string value found
      */
-    static translateObject(object: any, guildData: GuildData | undefined, context: any, maxDepth: number): void;
+    static translateObject<T extends Object>(object: T, guildData: GuildData | undefined, context: any, maxDepth: number): T;
     /**
      * Finds any language keys within the given text and translates them
      * @param d Guild Data to base the language on

@@ -4,6 +4,7 @@ const typings_1 = require("@freestuffbot/typings");
 const const_1 = require("../const");
 const localisation_1 = require("../lib/localisation");
 class BaseTheme {
+    //
     static build(games, data, settings) {
         const content = data.role ? `<@${data.role}>` : '';
         const embeds = games.map(game => this.buildEmbed(game, data, settings));
@@ -13,10 +14,7 @@ class BaseTheme {
                 color: const_1.default.embedDefaultColor
             });
         }
-        const _context = {
-            website: const_1.default.links.websiteClean
-        };
-        return { content, embeds, _context };
+        return { content, embeds, _context: this.defaultStaticContext };
     }
     //
     static buildEmbed(game, data, settings) {
@@ -135,4 +133,7 @@ class BaseTheme {
     }
 }
 exports.default = BaseTheme;
+BaseTheme.defaultStaticContext = {
+    website: const_1.default.links.websiteClean
+};
 //# sourceMappingURL=basetheme.js.map

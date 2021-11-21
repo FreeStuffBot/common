@@ -8,6 +8,9 @@ declare type themeSettings = {
 };
 declare type MessageEmbed = InteractionApplicationCommandCallbackData["embeds"][number];
 export default class BaseTheme {
+    static readonly defaultStaticContext: {
+        website: string;
+    };
     static build(games: GameInfo[], data: GuildData, settings: themeSettings): InteractionApplicationCommandCallbackData;
     static buildEmbed(game: GameInfo, data: GuildData, settings: themeSettings): Partial<MessageEmbed>;
     static generateUntil(game: GameInfo, data: GuildData): string;

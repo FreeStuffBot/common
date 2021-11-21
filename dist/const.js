@@ -175,7 +175,7 @@ Const.currencies = [
         id: 4,
         code: 'bgn',
         name: '=currency_bgn',
-        symbol: 'Лв',
+        symbol: 'лв.',
         calculated: true
     },
     {

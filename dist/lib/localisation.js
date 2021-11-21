@@ -82,7 +82,7 @@ class Localisation {
      */
     static translateObject(object, guildData, context, maxDepth) {
         if (maxDepth <= 0)
-            return;
+            return null;
         for (const key in object) {
             if (key === '_context')
                 continue;
