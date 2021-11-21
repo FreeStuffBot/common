@@ -1,5 +1,6 @@
 import { GameInfo, GuildData, ThemeBuilder } from "@freestuffbot/typings"
 import { InteractionApplicationCommandCallbackData } from "cordo"
+import { BaseTheme, Localisation } from ".."
 
 
 export default class ThemeTen implements ThemeBuilder {
@@ -8,13 +9,13 @@ export default class ThemeTen implements ThemeBuilder {
     const content = data.role ? `<@${data.role}>` : ''
     const embeds = games.map(game => this.buildEmbed(game, data, settings.test))
 
-    return { content, embeds }
+    return { content, embeds, _context: BaseTheme.defaultStaticContext }
   }
 
-  private buildEmbed(game: GameInfo, _data: GuildData, test: boolean): Partial<InteractionApplicationCommandCallbackData["embeds"][number]> {
+  private buildEmbed(game: GameInfo, data: GuildData, test: boolean): Partial<InteractionApplicationCommandCallbackData["embeds"][number]> {
     const button = game.urls.client
       ? game.store === 'steam'
-        ? `=open_in_browser: [https://s.team/a/${game.urls.org.split('/app/')[1].split('/')[0]}](${game.urls.browser})\n'=open_in_steam_client: ${game.urls.client}`
+        ? `=open_in_browser: [https://s.team/a/${game.urls.org.split('/app/')[1].split('/')[0]}](${game.urls.browser})\n=open_in_steam_client: ${game.urls.client}`
         : `=open_in_browser: [${game.urls.org}](${game.urls.browser})\n=open_in_epic_games_client: <${game.urls.client}>`
       : `[=open_in_browser](${game.urls.default})`
 
@@ -29,7 +30,7 @@ export default class ThemeTen implements ThemeBuilder {
     const lines = [
       '```yaml',
       `  Name: ${game.title}`,
-      ` Store: =platform_${game.store}`,
+      ` Store: ${Localisation.text(data, '=platform_' + game.store)}`,
       ` Price: $${game.org_price.usd} | €${game.org_price.euro}`,
       ` Until: ${game.until?.toLocaleDateString('en-GB') ?? 'unknown'}`,
       `  Tags: ${game.tags?.slice(0, 3).join(', ') ?? ''}`,

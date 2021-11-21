@@ -14,6 +14,12 @@ type themeSettings = {
 type MessageEmbed = InteractionApplicationCommandCallbackData["embeds"][number]
 
 export default class BaseTheme {
+  
+  public static readonly defaultStaticContext = {
+    website: Const.links.websiteClean
+  }
+
+  //
 
   public static build(games: GameInfo[], data: GuildData, settings: themeSettings): InteractionApplicationCommandCallbackData {
     const content = data.role ? `<@${data.role}>` : ''
@@ -26,11 +32,7 @@ export default class BaseTheme {
       })
     }
 
-    const _context = {
-      website: Const.links.websiteClean
-    }
-
-    return { content, embeds, _context }
+    return { content, embeds, _context: this.defaultStaticContext }
   }
 
   //
