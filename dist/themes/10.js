@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const __1 = require("..");
 class ThemeTen {
     build(games, data, settings) {
-        const content = data.role ? `<@${data.role}>` : '';
+        const content = data.role ? `<@&${data.role}>` : '';
         const embeds = games.map(game => this.buildEmbed(game, data, settings.test));
         return { content, embeds, _context: __1.BaseTheme.defaultStaticContext };
     }

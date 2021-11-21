@@ -6,7 +6,7 @@ import Const from "../const"
 export default class ThemeSix implements ThemeBuilder {
 
   public build(games: GameInfo[], data: GuildData, settings: { test?: boolean, donationNotice?: boolean }): InteractionApplicationCommandCallbackData {
-    const content = data.role ? `<@${data.role}>` : ''
+    const content = data.role ? `<@&${data.role}>` : ''
     const embeds = games.map(game => ({
       author: {
         name: '=announcement_header'

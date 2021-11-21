@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const const_1 = require("../const");
 class ThemeSix {
     build(games, data, settings) {
-        const content = data.role ? `<@${data.role}>` : '';
+        const content = data.role ? `<@&${data.role}>` : '';
         const embeds = games.map(game => ({
             author: {
                 name: '=announcement_header'

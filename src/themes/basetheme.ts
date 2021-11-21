@@ -22,7 +22,7 @@ export default class BaseTheme {
   //
 
   public static build(games: GameInfo[], data: GuildData, settings: themeSettings): InteractionApplicationCommandCallbackData {
-    const content = data.role ? `<@${data.role}>` : ''
+    const content = data.role ? `<@&${data.role}>` : ''
     const embeds = games.map(game => this.buildEmbed(game, data, settings))
 
     if (settings.donationNotice) {

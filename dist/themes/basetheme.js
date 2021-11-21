@@ -6,7 +6,7 @@ const localisation_1 = require("../lib/localisation");
 class BaseTheme {
     //
     static build(games, data, settings) {
-        const content = data.role ? `<@${data.role}>` : '';
+        const content = data.role ? `<@&${data.role}>` : '';
         const embeds = games.map(game => this.buildEmbed(game, data, settings));
         if (settings.donationNotice) {
             embeds.push({
