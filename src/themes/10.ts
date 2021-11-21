@@ -15,9 +15,9 @@ export default class ThemeTen implements ThemeBuilder {
   private buildEmbed(game: GameInfo, data: GuildData, test: boolean): Partial<InteractionApplicationCommandCallbackData["embeds"][number]> {
     const button = game.urls.client
       ? game.store === 'steam'
-        ? `=open_in_browser: [https://s.team/a/${game.urls.org.split('/app/')[1].split('/')[0]}](${game.urls.browser})\n=open_in_steam_client: ${game.urls.client}`
-        : `=open_in_browser: [${game.urls.org}](${game.urls.browser})\n=open_in_epic_games_client: <${game.urls.client}>`
-      : `[=open_in_browser](${game.urls.default})`
+        ? `${Localisation.text(data, '=open_in_browser')}: [https://s.team/a/${game.urls.org.split('/app/')[1].split('/')[0]}](${game.urls.browser})\n${Localisation.text(data, '=open_in_steam_client')}: ${game.urls.client}`
+        : `${Localisation.text(data, '=open_in_browser')}: [${game.urls.org}](${game.urls.browser})\n${Localisation.text(data, '=open_in_epic_games_client')}: <${game.urls.client}>`
+      : `[${Localisation.text(data, '=open_in_browser')}](${game.urls.default})`
 
     const steamcontent = game.store === 'steam'
       ? [
