@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const const_1 = require("../const");
+const themeutils_1 = require("./themeutils");
 class ThemeFive {
     build(games, data, settings) {
-        const content = data.role ? `<@&${data.role}>` : '';
+        const content = themeutils_1.roleIdToMention(data.role);
         const embeds = games.map(game => ({
             author: {
                 name: '=announcement_header'

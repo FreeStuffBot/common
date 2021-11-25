@@ -1,13 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const __1 = require("..");
+const themeutils_1 = require("./themeutils");
 class ThemeTen {
     build(games, data, settings) {
-        const content = data.role
-            ? (data.role === 1 || data.role.equals?.(1))
-                ? '@everyone'
-                : `<@&${data.role}>`
-            : '';
+        const content = themeutils_1.roleIdToMention(data.role);
         const embeds = games.map(game => this.buildEmbed(game, data, settings.test));
         return { content, embeds, _context: __1.BaseTheme.defaultStaticContext };
     }

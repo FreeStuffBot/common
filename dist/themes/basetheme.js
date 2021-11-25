@@ -3,10 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const typings_1 = require("@freestuffbot/typings");
 const const_1 = require("../const");
 const localisation_1 = require("../lib/localisation");
+const themeutils_1 = require("./themeutils");
 class BaseTheme {
     //
     static build(games, data, settings) {
-        const content = data.role ? `<@&${data.role}>` : '';
+        const content = themeutils_1.roleIdToMention(data.role);
         const embeds = games.map(game => this.buildEmbed(game, data, settings));
         if (settings.donationNotice) {
             embeds.push({
