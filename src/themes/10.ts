@@ -1,16 +1,13 @@
 import { GameInfo, GuildData, ThemeBuilder } from "@freestuffbot/typings"
 import { InteractionApplicationCommandCallbackData } from "cordo"
 import { BaseTheme, Localisation } from ".."
+import { roleIdToMention } from "./themeutils"
 
 
 export default class ThemeTen implements ThemeBuilder {
 
   public build(games: GameInfo[], data: GuildData, settings: { test?: boolean }): InteractionApplicationCommandCallbackData {
-    const content = data.role
-      ? data.role.equals(1)
-        ? '@everyone'
-        : `<@&${data.role}>`
-      : ''
+    const content = roleIdToMention(data.role)
     const embeds = games.map(game => this.buildEmbed(game, data, settings.test))
 
     return { content, embeds, _context: BaseTheme.defaultStaticContext }

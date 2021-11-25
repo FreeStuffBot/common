@@ -4,7 +4,7 @@ const __1 = require("..");
 class ThemeTen {
     build(games, data, settings) {
         const content = data.role
-            ? data.role.equals(1)
+            ? (data.role === 1 || data.role.equals?.(1))
                 ? '@everyone'
                 : `<@&${data.role}>`
             : '';

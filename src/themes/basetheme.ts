@@ -2,6 +2,7 @@ import { GameFlag, GameInfo, GuildData } from "@freestuffbot/typings"
 import { InteractionApplicationCommandCallbackData } from "cordo"
 import Const from "../const"
 import Localisation from "../lib/localisation"
+import { roleIdToMention } from "./themeutils"
 
 
 type themeSettings = {
@@ -22,7 +23,7 @@ export default class BaseTheme {
   //
 
   public static build(games: GameInfo[], data: GuildData, settings: themeSettings): InteractionApplicationCommandCallbackData {
-    const content = data.role ? `<@&${data.role}>` : ''
+    const content = roleIdToMention(data.role)
     const embeds = games.map(game => this.buildEmbed(game, data, settings))
 
     if (settings.donationNotice) {
