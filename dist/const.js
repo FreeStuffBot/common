@@ -3,12 +3,23 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const util_1 = require("./lib/util");
 const localisation_1 = require("./lib/localisation");
 class Const {
+    static getDefaultSettingsBits() {
+        let language = localisation_1.default.languageToId('en-GB');
+        if (language === -1)
+            language = 0;
+        return util_1.default.modifyBits(0, 5, 4, Const.currencies[0].id)
+            | util_1.default.modifyBits(0, 10, 6, language);
+    }
+    static getDefaultFilterBits() {
+        return util_1.default.modifyBits(0, 2, 2, Const.defaultPriceClass.id)
+            | util_1.default.modifyBits(0, 4, 8, Const.defaultPlatforms);
+    }
 }
 exports.default = Const;
 Const.links = {
     website: 'https://freestuffbot.xyz/',
     websiteClean: 'freestuffbot.xyz',
-    botInvite: 'https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=445504&scope=bot%20applications.commands&response_type=code',
+    botInvite: 'https://discord.com/oauth2/authorize?redirect_uri=https%3A%2F%2Ffreestuffbot.xyz%2Fcallback&client_id=672822334641537041&permissions=537316416&scope=bot%20applications.commands&response_type=code',
     supportInvite: 'https://discord.gg/WrnKKF8',
     topgg: 'https://top.gg/bot/672822334641537041/vote',
     dbl: 'https://discord.ly/freestuff',
@@ -339,10 +350,4 @@ Const.testAnnouncementContent = {
         steam_subids: '12345 98760'
     }
 };
-Const.defaultSettingsBits = 0
-    | util_1.default.modifyBits(0, 5, 4, Const.currencies[0].id)
-    | util_1.default.modifyBits(0, 10, 6, localisation_1.default.languageToId('en-GB'));
-Const.defaultFilterBits = 0
-    | util_1.default.modifyBits(0, 2, 2, Const.defaultPriceClass.id)
-    | util_1.default.modifyBits(0, 4, 8, Const.defaultPlatforms);
 //# sourceMappingURL=const.js.map

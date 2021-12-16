@@ -67,6 +67,6 @@ export default class Const {
     static readonly platforms: Platform[];
     static readonly defaultPlatforms: number;
     static readonly testAnnouncementContent: GameInfo;
-    static readonly defaultSettingsBits: number;
-    static readonly defaultFilterBits: number;
+    static getDefaultSettingsBits(): number;
+    static getDefaultFilterBits(): number;
 }

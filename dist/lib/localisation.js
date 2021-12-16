@@ -91,6 +91,7 @@ class Localisation {
             else if (typeof object[key] === 'string')
                 object[key] = Localisation.text(guildData, object[key], context);
         }
+        return object;
     }
     /**
      * Finds any language keys within the given text and translates them
