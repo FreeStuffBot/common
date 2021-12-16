@@ -358,12 +358,16 @@ export default class Const {
     }
   }
 
-  public static readonly defaultSettingsBits: number = 0
-    | Util.modifyBits(0, 5, 4, Const.currencies[0].id)
-    | Util.modifyBits(0, 10, 6, Localisation.languageToId('en-GB'))
+  public static getDefaultSettingsBits(): number {
+    let language = Localisation.languageToId('en-GB')
+    if (language === -1) language = 0
+    return Util.modifyBits(0, 5, 4, Const.currencies[0].id)
+    | Util.modifyBits(0, 10, 6, language)
+  }
 
-  public static readonly defaultFilterBits: number = 0
-    | Util.modifyBits(0, 2, 2, Const.defaultPriceClass.id)
+  public static getDefaultFilterBits(): number {
+    return Util.modifyBits(0, 2, 2, Const.defaultPriceClass.id)
     | Util.modifyBits(0, 4, 8, Const.defaultPlatforms)
+  }
 
 }

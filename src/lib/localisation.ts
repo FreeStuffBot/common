@@ -99,6 +99,7 @@ export default class Localisation {
       if (typeof object[key] === 'object') Localisation.translateObject(object[key], guildData, context, maxDepth - 1)
       else if (typeof object[key] === 'string') object[key as any] = Localisation.text(guildData, object[key as any], context)
     }
+    return object
   }
 
   /**
